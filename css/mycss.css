@@ -481,7 +481,7 @@ template {
 /**/
 .flex-container{
   display:flex;
-  border:1px solid red;
+  //border:1px solid red;
 }
 .col{
   padding:0 15px;
@@ -490,7 +490,9 @@ template {
 .mobile-web__title,
 .integrating-it__title,
 .design-development__title,
-.relationship-management__title{
+.relationship-management__title,
+.our-approach__title,
+.case-study__title{
   margin-left: 32.5%;
   margin-top: 210px;
   font-size: 20px;
@@ -501,7 +503,9 @@ template {
 .mobile-web__content,
 .integrating-it__content,
 .design-development__content,
-.relationship-management__content{
+.relationship-management__content,
+.our-approach__content,
+.case-study__content{
   margin-left: 32.5%;
   font-size: 18px;
   line-height: 18px;
@@ -509,7 +513,9 @@ template {
 .mobile-web__arrow,
 .integrating-it__arrow,
 .design-development__arrow,
-.relationship-management__arrow{
+.relationship-management__arrow,
+.our-approach__arrow,
+.case-study__arrow{
   margin:0 0 215px 32.5%;
 }
 .mobile-web-container-icon,
@@ -528,7 +534,7 @@ template {
   margin:auto;
   /*background: url("../img/spritesheet-1.png") no-repeat 60px -2902px;/*-315px-2810px/1270px*/
   /*background:url("../img/mobile-web-icon.png") no-repeat center/245px;/* 245px*/
-  border:1px solid red;
+  //border:1px solid red;
 }
 .mobile-web-container-icon{
   /*background: url("../img/spritesheet-1.png") no-repeat 60px -2902px;/*-315px-2810px/1270px*/
@@ -552,10 +558,38 @@ template {
 .design-development-icon{
   background:url("../img/design-development-icon.png") no-repeat center /205px;
 }
+.design-development__title{
+  margin-top: 265px;
+}
 /**/
 .relationship-management-container{
-  background:url("../img/relationship-management-bg.png") no-repeat -280px -90px;
+  background:url("../img/relationship-management-bg.png") no-repeat -280px -100px;
 }
 .relationship-management-icon{
   background:url("../img/relationship-management-icon.png") no-repeat center /330px;
+}
+.relationship-management__title{
+  margin-top:190px;
+}
+.relationship-management__arrow{
+  margin-bottom:190px;
+}
+/**/
+.our-approach{
+  background:url(../img/our-approach-bg.png) no-repeat -95px -540px;
+}
+.case-study{
+  background:url(../img/case-study-bg.png) no-repeat left top/cover;
+}
+.our-approach__title,
+.case-study__title{
+  margin-top:365px;
+}
+.our-approach__content,
+.case-study__content{
+  margin-bottom:5px;
+}
+.our-approach__arrow,
+.case-study__arrow{
+  margin-bottom:90px;
 }
