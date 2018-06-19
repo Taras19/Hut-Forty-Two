@@ -373,6 +373,7 @@ template {
 }
 /*Home-page*/
 .home-page{
+  position:relative;
   background-color:#FFCC33;
   padding-top:75px;
   padding-bottom:120px;
@@ -394,9 +395,59 @@ template {
   margin-left:16.5%;
   margin-bottom:45px;
 }
+.home-page__point{
+  font-size:68%;
+  line-height:68%;
+}
 .home-page__about-us{
   margin-left:33%;
   font-size:24px;
   line-height:24px;
   margin-bottom:0;
+}
+.arrow{
+  display:flex;
+  width:40px;
+  height:20px;
+}
+.home-page__arrow{
+  position:absolute;
+  bottom:50px;
+  left:32.5%;
+  transform:rotate(90deg);
+}
+.arrow span{
+  display:block;
+  position:relative;
+  width:33.333333%;
+  margin-right:2px;
+}
+.arrow span:first-child::before,
+.arrow span:first-child+span::before{
+  content:"";
+  position:absolute;
+  top:50%;
+  transform:translate(0,-50%);
+  height:3px;
+  width:100%;
+  background-color:#33CC33;
+}
+.arrow span:last-child::before{
+  content:"";
+  position:absolute;
+  width:15px;
+  height:15px;
+  top:50%;
+  border:3px solid #33CC33;
+  border-left-color:transparent;
+  border-bottom-color:transparent;
+  transform:translate(-50% ,-50%) rotate(45deg);
+}
+.home-page__arrow span:first-child::before,
+.home-page__arrow span:first-child+span::before{
+  background-color:#FFFFFF;
+}
+.home-page__arrow span:last-child::before{
+  border-top-color:#FFFFFF;
+  border-right-color:#FFFFFF;
 }
