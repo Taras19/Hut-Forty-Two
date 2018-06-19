@@ -413,7 +413,7 @@ template {
 }
 .arrow{
   display:flex;
-  width:40px;
+  width:35px;
   height:20px;
 }
 .home-page__arrow{
@@ -434,17 +434,17 @@ template {
   position:absolute;
   top:50%;
   transform:translate(0,-50%);
-  height:3px;
+  height:2px;
   width:100%;
   background-color:#33CC33;
 }
 .arrow span:last-child::before{
   content:"";
   position:absolute;
-  width:15px;
-  height:15px;
+  width:12px;
+  height:12px;
   top:50%;
-  border:3px solid #33CC33;
+  border:2px solid #33CC33;
   border-left-color:transparent;
   border-bottom-color:transparent;
   transform:translate(-50% ,-50%) rotate(45deg);
@@ -460,7 +460,7 @@ template {
 /**/
 .old-software{
   padding:125px 15px 160px 15px;
-  background-color:lightgray;
+  background:url("../img/old-software-bg.png") no-repeat 33vw 0/67vw;
 }
 .old-software__question{
   font-size: 32px;
@@ -479,16 +479,18 @@ template {
   //margin-bottom:50px;
 }
 /**/
-.mobile-web-container{
+.flex-container{
   display:flex;
   border:1px solid red;
 }
-.mobile-web,
-.mobile-web-container-icon{
+.col{
   padding:0 15px;
   width:50%;
 }
-.mobile-web__title{
+.mobile-web__title,
+.integrating-it__title,
+.design-development__title,
+.relationship-management__title{
   margin-left: 32.5%;
   margin-top: 210px;
   font-size: 20px;
@@ -496,22 +498,64 @@ template {
   font-weight: bold;
 
 }
-.mobile-web__content{
+.mobile-web__content,
+.integrating-it__content,
+.design-development__content,
+.relationship-management__content{
   margin-left: 32.5%;
   font-size: 18px;
   line-height: 18px;
 }
-.mobile-web__arrow{
+.mobile-web__arrow,
+.integrating-it__arrow,
+.design-development__arrow,
+.relationship-management__arrow{
   margin:0 0 215px 32.5%;
 }
-.mobile-web-container-icon{
+.mobile-web-container-icon,
+.integrating-it-container-icon,
+.design-development-container-icon,
+.relationship-management-container-icon{
   display:flex;
   //justify-content:center;
 }
-.mobile-web-icon{
+.mobile-web-icon,
+.integrating-it-icon,
+.design-development-icon,
+.relationship-management-icon{
   width:100%;
-  height:200px;
+  height:240px;
   margin:auto;
-  background: url("../img/spritesheet-1.png") no-repeat center -2920px;/*-315px-2810px/1270px*/
+  /*background: url("../img/spritesheet-1.png") no-repeat 60px -2902px;/*-315px-2810px/1270px*/
+  /*background:url("../img/mobile-web-icon.png") no-repeat center/245px;/* 245px*/
   border:1px solid red;
+}
+.mobile-web-container-icon{
+  /*background: url("../img/spritesheet-1.png") no-repeat 60px -2902px;/*-315px-2810px/1270px*/
+  background:url("../img/mobile-web-icon.png") no-repeat center/245px;/* 245px*/
+}
+/**/
+.integrating-it{
+  background:url("../img/integrating-systems-bg.png") no-repeat left top/cover;
+}
+.integrating-it__title{
+  margin-top:195px;
+}
+.integrating-it-container-icon{
+  background:url("../img/integrating-systems-icon-bg.png") no-repeat center center/cover;
+}
+.integrating-it-icon{
+  /*background:url("../img/spritesheet-1.png") no-repeat 68px -1702px;*/
+  background:url("../img/integrating-systems-icon.png") no-repeat center /245px;
+}
+/**/
+.design-development-icon{
+  background:url("../img/design-development-icon.png") no-repeat center /205px;
+}
+/**/
+.relationship-management-container{
+  background:url("../img/relationship-management-bg.png") no-repeat -280px -90px;
+}
+.relationship-management-icon{
+  background:url("../img/relationship-management-icon.png") no-repeat center /330px;
 }
