@@ -158,32 +158,32 @@
       <!-- Start a conversation -->
       <div class="start-conversation-main-container">
         <div class="start-conversation">
-          <h2 class="start-conversation__title">Start a conversation<span class="point"><sub>&#8226;</sub></span></h2>
-          <form action="#" method="post" class="start-conversation__form">
-            <input type="email" name="email" placeholder="*your email" required autocomplete="on">
-            <input type="text" name="business" placeholder="*your business" autocomplete="on">
-            <textarea name="message"  rows="10" placeholder="*your message" required></textarea>
+          <h2 class="start-conversation__title">Start a conversatio<span class="start-conversation__container-icon">n<span class="start-conversation__icon"></span></span><span class="point"><sub>&#8226;</sub></span></h2>
+          <form action="#" method="post" class="start-conversation__form" id="conversation__form">
+            <input type="email" name="email" class="start-conversation__item" placeholder="*your email" required autocomplete="on">
+            <input type="text" name="business" class="start-conversation__item" placeholder="*your business" autocomplete="on">
+            <textarea name="message" class="start-conversation__item" rows="12" placeholder="*your message" required></textarea>
             <div class="start-conversation__container">
-              <section class="start-conversation__container-select-leter">
+              <section class="start-conversation__container-select-leter ">
                 <h6 class="start-conversation__select-leter">Please select the letter H?</h6>
                 <p class="start-conversation__content">Just to make sure you are human ;)</p>
               </section>
-              <div class="start-conversation__list-letter">
+              <div class="start-conversation__list-letter ">
                 <label>S
-                  <input type="radio" name="select-letter" value="S">
+                  <input type="radio" name="select-letter" value="S" for="conversation__form">
                 </label>
                 <label>Z
-                  <input type="radio" name="select-letter" value="Z">
+                  <input type="radio" name="select-letter" value="Z" for="conversation__form">
                 </label>
                 <label>H
-                  <input type="radio" name="select-letter" value="H">
+                  <input type="radio" name="select-letter" value="H" required for="conversation__form">
                 </label>
                 <label>P
-                  <input type="radio" name="select-letter" value="P">
+                  <input type="radio" name="select-letter" value="P" for="conversation__form">
                 </label>
               </div>
             </div>
-            <button type="button" class="start-conversation__send-it">Send it</button>
+            <button type="submit" class="start-conversation__send-it">Send it</button>
           </form>
         </div>
       </div>

@@ -593,3 +593,89 @@ template {
 .case-study__arrow{
   margin-bottom:90px;
 }
+/**/
+.start-conversation-main-container{
+  padding:0 15px;
+  background:url("../img/start-conversation-bg.png") no-repeat right 136%;
+}
+.start-conversation{
+  width:66.666666%;
+  margin:auto;
+  //border:1px solid red;
+}
+.start-conversation__title{
+  margin: 250px 0 55px;
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 50px;
+}
+.start-conversation__container-icon{
+  position:relative;
+}
+.start-conversation__icon{
+  position:absolute;
+  left:70%;
+  bottom:70%;
+  height: 75px;
+  width: 90px;
+  background:url("../img/spritesheet.png") no-repeat -70px -230px;
+  //border:1px solid green;
+}
+.start-conversation__form{
+  display:flex;
+  flex-direction:column;
+}
+.start-conversation__item{
+  padding:10px 15px;
+  background-color:rgba(204,204,204,.25);
+  margin-bottom: 25px;
+  border: none;
+  //box-sizing:border-box;
+}
+textarea {
+    resize: none;
+}
+::-webkit-input-placeholder { color:#33CC33; }
+::-moz-placeholder          { color:#33CC33; } /* Firefox 19+ */
+:-moz-placeholder           { color:#33CC33; } /* Firefox 18- */
+:-ms-input-placeholder      { color:#33CC33; }
+.start-conversation__container{
+  display:flex;
+}
+.start-conversation__container-select-leter {
+  width:44%;
+}
+.start-conversation__select-leter{
+  margin: 40px 0 0;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 18px;
+  //width:50%;
+}
+.start-conversation__list-letter{
+  display:flex;
+  align-items:flex-end;
+  width:56%;
+}
+.start-conversation__list-letter label{
+  padding: 10px 15px;
+  background-color: rgba(204,204,204,.25);
+  color: #33CC33;
+  margin: 10px 5px 10px 10px;
+  font-size: 28px;
+  line-height: 28px;
+  font-weight: bold;
+}
+.start-conversation__list-letter input[type="radio"]{
+  display:none;
+}
+.start-conversation__send-it{
+  align-self:flex-start;
+}
+.start-conversation__send-it{
+  padding: 15px 115px 10px 40px;
+    margin: 10px 0 105px 0;
+    color: #FFFFFF;
+    border: none;
+    background: url("../img/spritesheet.png") no-repeat 70px -1310px #33CC33;
+}
