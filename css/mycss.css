@@ -376,6 +376,9 @@ template {
 .active-link{
   background-color:#33CC33;
 }
+.btn{
+  display:none;
+}
 /*Home-page*/
 .home-page{
   position:relative;
@@ -536,7 +539,7 @@ template {
   /*background:url("../img/mobile-web-icon.png") no-repeat center/245px;/* 245px*/
   //border:1px solid red;
 }
-.mobile-web-container-icon{
+.mobile-web-icon{
   /*background: url("../img/spritesheet-1.png") no-repeat 60px -2902px;/*-315px-2810px/1270px*/
   background:url("../img/mobile-web-icon.png") no-repeat center/245px;/* 245px*/
 }
@@ -772,10 +775,18 @@ textarea {
   padding:10px 0;
   color:#FFFFFF;
   font-size:14px;
+  //text-decoration:none;
+}
+.nav-bottom__link:hover{
+  color:#FFFFFF;
+  text-decoration:none;
 }
 .nav-bottom__search{
   color:transparent;
   background:url("../img/spritesheet.png") no-repeat -70px -1157px;
+}
+.nav-bottom__search:hover{
+  color:transparent;
 }
 .header-bottom-container__title{
   padding: 0 15px;
@@ -792,4 +803,209 @@ textarea {
   padding: 15px 5%;
   font-size: 10px;
   line-height: 10px;
+}
+/* media for menu top, change bg Customer Relationship Management*/
+@media all and (max-width:960px){
+  .header-top-container{
+    flex-direction:column;
+    justify-content:flex-start;
+    position:fixed;
+    top:0;
+    left:-200px;
+    bottom:0;
+    min-height:100vh;
+    width:200px;
+    overflow:auto;
+    transition: left 0.5s ease;
+    z-index:100;
+  }
+  .header-top-container--close{
+    left:0;
+  }
+  .header-logo{
+    justify-content:flex-start;
+    width:auto;
+    min-height:41px;
+    margin:5vh 0;
+  }
+  .header-logo__link{
+    height:41px;
+    width:100%;
+    background-position:-55px -590px;
+  }
+  .nav-top{
+    flex-direction:column;
+    min-height:100vh;
+  }
+  .nav-top__item{
+    border-bottom:1px solid #FFFFFF;
+  }
+  .nav-top__link{
+    padding:10px 15px;
+  }
+  .nav-top__link--icon{
+    width:auto;
+  }
+  .nav-top__link--search{
+    background-position:-55px -1156px;
+  }
+  .btn{
+    display:block;
+    position:fixed;
+    top:5vh;
+    left:20px;
+    background:rgba(255,255,255,.3);
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border:1px solid rgba(255,255,255,.3);
+    border-radius:5px;
+    overflow: hidden;
+    z-index: 100;
+    cursor:pointer;
+    transition: left 0.5s ease;
+  }
+  .btn:hover,
+  .btn:active,
+  .btn:focus{
+    outline:none;
+  }
+  .btn .line {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      background-color:#1a1a1a;
+      z-index: 100;
+  }
+  /*close menu*/
+  .header-top-container + .btn .line.top{
+    top:5px;
+    left:0;
+    transform:rotate(0);
+    -webkit-transition: all .35s ease-in-out;
+  }
+  .header-top-container + .btn .line.middle{
+    display:block;
+    top:50%;
+    left:0;
+    margin-top:-2px;
+    -webkit-transition: all .35s ease-in-out;
+  }
+  .header-top-container + .btn .line.bottom{
+    bottom:5px;
+    left:0;
+    transform:rotate(0);
+      -webkit-transition: all .35s ease-in-out;
+  }
+
+  /* open menu*/
+  .header-top-container--close + .btn{
+    left:220px;
+  }
+  .header-top-container--close + .btn .line.top {
+      top: -2px;
+      left: 0;
+      transform: rotate(45deg);
+      transform-origin: 0 2px;
+      width: 100px;
+      -webkit-transition: -webkit-transform .2s cubic-bezier(.73,1,.28,.08);
+  }
+  .header-top-container--close + .btn .line.middle {
+      display: none;
+      -webkit-transition: -webkit-transform .2s cubic-bezier(.73,1,.28,.08);
+  }
+  .header-top-container--close + .btn .line.bottom {
+      bottom: -2px;
+      left: 0;
+      transform: rotate(-45deg);
+      transform-origin: 0 2px;
+      width: 100px;
+      -webkit-transition: -webkit-transform .2s cubic-bezier(.73,1,.28,.08);
+  }
+  /*change bg Customer Relationship Management*/
+  .relationship-management-container{
+    background:none;
+  }
+  .relationship-management{
+    background:url("../img/relationship-management-bg.png") no-repeat -280px -100px;
+  }
+}
+/* start-conversation__container,start-conversation__container-select-leter */
+@media all and (max-width:860px){
+  .start-conversation__container{
+    flex-wrap:wrap;
+  }
+  .start-conversation__container-select-leter {
+    width:100%;
+  }
+  .start-conversation__list-letter label:first-child{
+    margin-left:0;
+  }
+}
+/**/
+@media all and (max-width:575px){
+  .flex-container{
+    flex-wrap:wrap;
+  }
+  .col{
+    width:100%;
+  }
+  .start-conversation{
+    width:100%;
+  }
+  .start-conversation__title{
+    font-size:30px;
+    margin-right:90px;
+  }
+  .our-insights__aside,
+  .header-bottom-container-logo,
+  .nav-bottom-main-container{
+    width:100%;
+  }
+  .our-insights__icon,
+  .header-bottom__logo,
+  .our-insights__title{
+    margin-left:0;
+    align-self:center;
+  }
+  .our-insights__latest-container{
+    width:100%;
+  }
+  .our-insights__latest,
+  .nav-bottom-container{
+    width:100%;
+    margin-left:0;
+  }
+  .header-bottom-container__title{
+    margin-left:0;
+  }
+  .mobile-web__title, .integrating-it__title, 
+  .design-development__title, 
+  .relationship-management__title, 
+  .our-approach__title, 
+  .case-study__title{
+    margin-left:0;
+    margin-top:25vmin;
+  }
+  .mobile-web__content, 
+  .integrating-it__content, 
+  .design-development__content, 
+  .relationship-management__content, 
+  .our-approach__content, 
+  .case-study__content{
+    margin-left:0;
+  }
+  .mobile-web__arrow, 
+  .integrating-it__arrow, 
+  .design-development__arrow, 
+  .relationship-management__arrow, 
+  .our-approach__arrow, 
+  .case-study__arrow{
+    margin-left:0;
+    margin-bottom:25vmin;
+  }
+  .old-software{
+    padding:25vmin 15px;
+  }
 }
