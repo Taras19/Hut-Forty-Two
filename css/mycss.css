@@ -687,7 +687,8 @@ textarea {
 .our-insights-container{
   background-color:#FFCC33;
 }
-.our-insights__aside{
+.our-insights__aside,
+.header-bottom-container-logo{
   display:flex;
   flex-direction:column;
   padding:0 15px;
@@ -697,7 +698,6 @@ textarea {
   width: 110px;
   height: 80px;
   margin: 30px 0 0 18%;
-  border: 1px solid red;
   background: url("../img/spritesheet.png") no-repeat -70px -957px;
 }
 .our-insights__title{
@@ -713,25 +713,83 @@ textarea {
 .our-insights__title span:last-child{
   font-weight:normal;
 }
-.our-insights__latest{
+.our-insights__latest-container{
   width:75%;
   background-color:white;
   margin:30px 0 0;
 }
+.our-insights__latest{
+  width: 69%;
+  margin-left: 10%;
+  box-sizing: border-box;
+  padding: 0 15px;
+}
+
 .our-insights__latest-title{
   font-size: 18px;
   line-height: 18px;
   font-weight:bold;
-  margin: 80px 0 5px 11%;
+  margin: 80px 0 5px 0;
 }
 .our-insights__content{
   font-size: 18px;
-  margin: 0 25% 10px 11%;
+  margin: 0 0 10px 0;
 }
 .our-insights__arrow{
-  margin-left:11%;
   margin-bottom:55px;
 }
+/**/
 .header-bottom-container{
-  background-color:black;
+  background-color:#3E3C3C;
+}
+.header-bottom__logo{
+  width: 70px;
+  height: 100px;
+  margin: 50px 0 0 18%;
+  background: url("../img/spritesheet.png") no-repeat -70px -745px;
+}
+.nav-bottom-main-container{
+  width:75%;
+  margin-top:55px;
+}
+.nav-bottom-container{
+  width: 69%;
+  margin-left: 10%;
+  display:flex;
+}
+.nav-bottom__left,
+.nav-bottom__right{
+  width:50%;
+  padding:0 15px;
+  list-style:none;
+  margin:0;
+}
+.nav-bottom__item{
+  border-bottom:1px solid #FFFFFF;
+}
+.nav-bottom__link{
+  display:block;
+  padding:10px 0;
+  color:#FFFFFF;
+  font-size:14px;
+}
+.nav-bottom__search{
+  color:transparent;
+  background:url("../img/spritesheet.png") no-repeat -70px -1157px;
+}
+.header-bottom-container__title{
+  padding: 0 15px;
+  margin:40px 0 65px 10%;
+  font-size: 18px;
+  line-height: 18px;
+}
+.header-bottom-container__point{
+  font-size:.7em;
+  line-height:.7em;
+}
+
+.footer-main{
+  padding: 15px 5%;
+  font-size: 10px;
+  line-height: 10px;
 }
