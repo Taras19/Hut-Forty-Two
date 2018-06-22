@@ -385,7 +385,7 @@ template {
   background-color:#FFCC33;
   //padding-top:75px;
   //padding-bottom:120px;
-  padding:75px 15px 120px 15px;
+  padding:6.25% 15px 120px 15px;/*75px 15px 120px 15px*/
 }
 .home-page__main-title{
   font-size:80px;
@@ -462,7 +462,7 @@ template {
 }
 /**/
 .old-software{
-  padding:125px 15px 160px 15px;
+  padding:10.416% 15px 13.333% 15px;/*125px 15px 160px 15px*/
   background:url("../img/old-software-bg.png") no-repeat 33vw 0/67vw;
 }
 .old-software__question{
@@ -497,7 +497,7 @@ template {
 .our-approach__title,
 .case-study__title{
   margin-left: 32.5%;
-  margin-top: 210px;
+  margin-top: 36.842%;/*210px*/
   font-size: 20px;
   line-height: 20px;
   font-weight: bold;
@@ -519,7 +519,7 @@ template {
 .relationship-management__arrow,
 .our-approach__arrow,
 .case-study__arrow{
-  margin:0 0 215px 32.5%;
+  margin:0 0 37.719% 32.5%;
 }
 .mobile-web-container-icon,
 .integrating-it-container-icon,
@@ -548,7 +548,7 @@ template {
   background:url("../img/integrating-systems-bg.png") no-repeat left top/cover;
 }
 .integrating-it__title{
-  margin-top:195px;
+  margin-top:34.211%;/*195px*/
 }
 .integrating-it-container-icon{
   background:url("../img/integrating-systems-icon-bg.png") no-repeat center center/cover;
@@ -562,7 +562,7 @@ template {
   background:url("../img/design-development-icon.png") no-repeat center /205px;
 }
 .design-development__title{
-  margin-top: 265px;
+  margin-top: 46.491%;/*265px*/
 }
 /**/
 .relationship-management-container{
@@ -572,10 +572,10 @@ template {
   background:url("../img/relationship-management-icon.png") no-repeat center /330px;
 }
 .relationship-management__title{
-  margin-top:190px;
+  margin-top:33.333%;/*190px*/
 }
 .relationship-management__arrow{
-  margin-bottom:190px;
+  margin-bottom:33.333%;/**/
 }
 /**/
 .our-approach{
@@ -586,7 +586,7 @@ template {
 }
 .our-approach__title,
 .case-study__title{
-  margin-top:365px;
+  margin-top:64.035%;/*365px*/
 }
 .our-approach__content,
 .case-study__content{
@@ -594,7 +594,7 @@ template {
 }
 .our-approach__arrow,
 .case-study__arrow{
-  margin-bottom:90px;
+  margin-bottom:15.789%;/*90px*/
 }
 /**/
 .start-conversation-main-container{
@@ -943,6 +943,13 @@ textarea {
     margin-left:0;
   }
 }
+@media all and (max-width:767px){
+  .our-insights__latest,
+  .nav-bottom-container{
+    width:100%;
+    margin-left:0;
+  }
+}
 /**/
 @media all and (max-width:575px){
   .flex-container{
@@ -957,6 +964,7 @@ textarea {
   .start-conversation__title{
     font-size:30px;
     margin-right:90px;
+    margin-top: 100px;
   }
   .our-insights__aside,
   .header-bottom-container-logo,
@@ -986,7 +994,7 @@ textarea {
   .our-approach__title, 
   .case-study__title{
     margin-left:0;
-    margin-top:25vmin;
+   //margin-top:25vmin;
   }
   .mobile-web__content, 
   .integrating-it__content, 
@@ -1003,9 +1011,9 @@ textarea {
   .our-approach__arrow, 
   .case-study__arrow{
     margin-left:0;
-    margin-bottom:25vmin;
+    //margin-bottom:25vmin;
   }
   .old-software{
-    padding:25vmin 15px;
+    //padding:25vmin 15px;
   }
 }
