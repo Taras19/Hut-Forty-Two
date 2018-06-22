@@ -949,6 +949,34 @@ textarea {
     width:100%;
     margin-left:0;
   }
+  .mobile-web__title, .integrating-it__title, 
+  .design-development__title, 
+  .relationship-management__title, 
+  .our-approach__title, 
+  .case-study__title{
+    margin-left:0;
+  }
+  .mobile-web__content, 
+  .integrating-it__content, 
+  .design-development__content, 
+  .relationship-management__content, 
+  .our-approach__content, 
+  .case-study__content{
+    margin-left:0;
+  }
+  .mobile-web__arrow, 
+  .integrating-it__arrow, 
+  .design-development__arrow, 
+  .relationship-management__arrow, 
+  .our-approach__arrow, 
+  .case-study__arrow{
+    margin-left:0;
+  }
+  .start-conversation__title{
+    //font-size:30px;
+    //margin-right:90px;
+    margin-top: 100px;
+  }
 }
 /**/
 @media all and (max-width:575px){
@@ -964,7 +992,7 @@ textarea {
   .start-conversation__title{
     font-size:30px;
     margin-right:90px;
-    margin-top: 100px;
+    //margin-top: 100px;
   }
   .our-insights__aside,
   .header-bottom-container-logo,
@@ -988,13 +1016,13 @@ textarea {
   .header-bottom-container__title{
     margin-left:0;
   }
+/*
   .mobile-web__title, .integrating-it__title, 
   .design-development__title, 
   .relationship-management__title, 
   .our-approach__title, 
   .case-study__title{
     margin-left:0;
-   //margin-top:25vmin;
   }
   .mobile-web__content, 
   .integrating-it__content, 
@@ -1011,9 +1039,7 @@ textarea {
   .our-approach__arrow, 
   .case-study__arrow{
     margin-left:0;
-    //margin-bottom:25vmin;
   }
-  .old-software{
-    //padding:25vmin 15px;
-  }
+  
+  */
 }
