@@ -354,7 +354,8 @@ template {
   font-size:14px;
   color:#FFFFFF;
 }
-.nav-top__link:hover{
+.nav-top__link:hover,
+.nav-bottom__link:hover{
   text-decoration:none;
   color:#FFFFFF;
   background-color:#33CC33;
@@ -383,8 +384,6 @@ template {
 .home-page{
   position:relative;
   background-color:#FFCC33;
-  //padding-top:75px;
-  //padding-bottom:120px;
   padding:6.25% 15px 120px 15px;/*75px 15px 120px 15px*/
 }
 .home-page__main-title{
@@ -541,7 +540,11 @@ template {
 }
 .mobile-web-icon{
   /*background: url("../img/spritesheet-1.png") no-repeat 60px -2902px;/*-315px-2810px/1270px*/
-  background:url("../img/mobile-web-icon.png") no-repeat center/245px;/* 245px*/
+  background:url("../img/mobile-web-icon.png") no-repeat center/calc(245px - 20%);/* 245px*/
+  transition:3s;
+}
+.mobile-web-icon.animation-bg-move-js{
+  background-size:245px;/* 245px*/
 }
 /**/
 .integrating-it{
@@ -555,11 +558,20 @@ template {
 }
 .integrating-it-icon{
   /*background:url("../img/spritesheet-1.png") no-repeat 68px -1702px;*/
-  background:url("../img/integrating-systems-icon.png") no-repeat center /245px;
+  background:url("../img/integrating-systems-icon.png") no-repeat center /calc(245px - 20%);
+  transition:3s;
 }
+.integrating-it-icon.animation-bg-move-js{
+  background-size:245px;
+}
+
 /**/
 .design-development-icon{
-  background:url("../img/design-development-icon.png") no-repeat center /205px;
+  background:url("../img/design-development-icon.png") no-repeat center /calc(205px - 20%);
+  transition:3s;
+}
+.design-development-icon.animation-bg-move-js{
+  background-size:205px;
 }
 .design-development__title{
   margin-top: 46.491%;/*265px*/
@@ -569,7 +581,11 @@ template {
   background:url("../img/relationship-management-bg.png") no-repeat -280px -100px;
 }
 .relationship-management-icon{
-  background:url("../img/relationship-management-icon.png") no-repeat center /330px;
+  background:url("../img/relationship-management-icon.png") no-repeat center /calc(330px - 20%);
+   transition:3s;
+}
+.relationship-management-icon.animation-bg-move-js{
+  background-size:330px;
 }
 .relationship-management__title{
   margin-top:33.333%;/*190px*/
@@ -804,6 +820,50 @@ textarea {
   font-size: 10px;
   line-height: 10px;
 }
+/*media margin-top ,margin-bottom from % to px*/
+@media all and (min-width:1201px){
+  .home-page{
+    padding:75px 15px 120px 15px;/*6.25% 15px 120px 15px*/
+  }
+  .old-software{
+    padding:125px 15px 160px 15px;/*10.416% 15px 13.333% 15px*/
+  }
+  .mobile-web__title,
+  .integrating-it__title,
+  .design-development__title,
+  .relationship-management__title,
+  .our-approach__title,
+  .case-study__title{
+    margin-top: 210px;/*36.842%*/
+  }
+  .our-approach__title,
+  .case-study__title{
+    margin-top:365px;/*64.035%*/
+  }
+  .mobile-web__arrow,
+  .integrating-it__arrow,
+  .design-development__arrow,
+  .relationship-management__arrow,
+  .our-approach__arrow,
+  .case-study__arrow{
+    margin:0 0 215px 32.5%;/*0 0 37.719% 32.5%*/
+  }
+  .relationship-management__title{
+    margin-top:190px;/*33.333%*/
+  }
+  .relationship-management__arrow{
+    margin-bottom:190px;/*33.333%*/
+  }
+  .our-approach__title,
+  .case-study__title{
+    margin-top:365px;/*64.035%*/
+  }
+  .our-approach__arrow,
+  .case-study__arrow{
+    margin-bottom:90px;/*15.789%*/
+  }
+}
+
 /* media for menu top, change bg Customer Relationship Management*/
 @media all and (max-width:960px){
   .header-top-container{
