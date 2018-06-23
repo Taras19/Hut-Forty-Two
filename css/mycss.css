@@ -990,7 +990,21 @@ textarea {
   .relationship-management{
     background:url("../img/relationship-management-bg.png") no-repeat -280px -100px;
   }
+  /* transition icon animation*/
+  .integrating-it-icon,
+  .mobile-web-icon,
+  .design-development-icon,
+  .relationship-management-icon{
+    background-size:15vmax;
+  }
+  .integrating-it-icon.animation-bg-move-js ,
+  .mobile-web-icon.animation-bg-move-js,
+  .design-development-icon.animation-bg-move-js,
+  .relationship-management-icon.animation-bg-move-js{
+    background-size: 22vmax;/*245px*/
+  }
 }
+
 /* start-conversation__container,start-conversation__container-select-leter */
 @media all and (max-width:860px){
   .start-conversation__container{
@@ -1075,6 +1089,25 @@ textarea {
   }
   .header-bottom-container__title{
     margin-left:0;
+  }
+  .mobile-web-icon, 
+  .integrating-it-icon, 
+  .design-development-icon, 
+  .relationship-management-icon{
+    height:200px;
+  }
+  /* transition icon animation*/
+  .integrating-it-icon,
+  .mobile-web-icon,
+  .design-development-icon,
+  .relationship-management-icon{
+    background-size:15vmax;
+  }
+  .integrating-it-icon.animation-bg-move-js ,
+  .mobile-web-icon.animation-bg-move-js,
+  .design-development-icon.animation-bg-move-js,
+  .relationship-management-icon.animation-bg-move-js{
+    background-size: 28vmax;/*245px*/
   }
 /*
   .mobile-web__title, .integrating-it__title, 
