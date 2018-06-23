@@ -328,10 +328,22 @@ template {
   display: none !important;
 }
 /*# sourceMappingURL=bootstrap-reboot.css.map */
+.body--padding{
+  padding-top:41px;
+}
 .header-top-container{
   background-color:#333333;
   display:flex;
+  position:relative;
   justify-content:space-between;
+}
+.nav-top-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right:0;
+    z-index: 100;
+    background-color: rgba(51,51,51,.5);
 }
 .header-logo{
   display:flex;
@@ -380,9 +392,27 @@ template {
 .btn{
   display:none;
 }
+.scroll-bar {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: calc(100% - 3px);
+}
+.progres {
+    width: 0;
+    height: 3px;
+    background-color: rgba(212, 41, 41, 0.7);
+}
 /*Home-page*/
 .home-page{
   position:relative;
+  //background-color:#FFCC33;
+  background:
+    url("../img/o-bg.png"),
+    url("../img/f-bg.png");
+  background-repeat:no-repeat,no-repeat;
+  background-position:33vw bottom, calc(-712px + 32vw) -240px;/*-420px -280px*/
+  background-size:67vw, auto;
   background-color:#FFCC33;
   padding:6.25% 15px 120px 15px;/*75px 15px 120px 15px*/
 }
@@ -471,6 +501,14 @@ template {
   margin-left: 16.3%;
   //margin-top: 125px;
 }
+.animated-title{
+  position:relative;
+  left:-100vw;
+  transition: left 2s;
+}
+.animated-title__show{
+  left:0;
+}
 .old-software__answer{
   font-size: 28px;
   line-height: 28px;
@@ -481,6 +519,12 @@ template {
   //margin-bottom:50px;
 }
 /**/
+.mobile-web-container{
+  background:url("../img/mobile-web-bg.png") no-repeat -450px -350px;
+}
+.design-development-container{
+  background:url("../img/design-development-bg.png") no-repeat -800px -400px;
+}
 .flex-container{
   display:flex;
   //border:1px solid red;
@@ -734,7 +778,7 @@ textarea {
 }
 .our-insights__latest-container{
   width:75%;
-  background-color:white;
+  background:url("../img/latest-news-container-bg.jpg") round ;
   margin:30px 0 0;
 }
 .our-insights__latest{
@@ -820,6 +864,111 @@ textarea {
   font-size: 10px;
   line-height: 10px;
 }
+/**/
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.animated--delay-1 {
+  animation-delay: 1s;
+  -webkit-animation-delay:1s;
+  -o-animation-delay:1s;
+  -moz-animation-delay:1s;
+}
+.animated--delay-2 {
+  animation-delay: 2s;
+  -webkit-animation-delay:2s;
+  -o-animation-delay:2s;
+  -moz-animation-delay:2s;
+}
+@-webkit-keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+.flash {
+  -webkit-animation-name: flash;
+  animation-name: flash;
+}
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+@-webkit-keyframes shake {
+  from,
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+@keyframes shake {
+  from,
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+.shake {
+  -webkit-animation-name: shake;
+  animation-name: shake;
+}
+/**/
 /*media margin-top ,margin-bottom from % to px*/
 @media all and (min-width:1201px){
   .home-page{
@@ -866,10 +1015,14 @@ textarea {
 
 /* media for menu top, change bg Customer Relationship Management*/
 @media all and (max-width:960px){
+  .body--padding{
+    padding-top:0;
+  }
   .header-top-container{
     flex-direction:column;
     justify-content:flex-start;
     position:fixed;
+    background-color:#333333;
     top:0;
     left:-200px;
     bottom:0;
@@ -878,6 +1031,9 @@ textarea {
     overflow:auto;
     transition: left 0.5s ease;
     z-index:100;
+  }
+  .scroll-bar{
+    top:0;
   }
   .header-top-container--close{
     left:0;
