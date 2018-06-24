@@ -251,6 +251,21 @@
         </nav>
       </header>
     </article>
+    <article class="chat-main-container">
+      <header class="chat-header">
+        <h6 class="live-chat-title">Live Chat</h6>
+        <span class="live-chat-button">&#215;</span>
+      </header> 
+      <form action="#" method="post" id="chat-form" name="live-chat-form">
+        <input type="text" placeholder="*Your name" name="live-chat-name" required autocomplete="on">
+        <input type="text" placeholder="*Your question"  name="live-chat-question" required autocomplete="on">
+        <textarea name="live-chat-message"  rows="5" required placeholder="*Your message"></textarea>
+      </form>
+      <footer class="chat-footer">
+        <button type="reset" class="live-chat-reset" form="chat-form">Cancel it</button>
+        <button type="submit" class="live-chat-submit" form="chat-form">Send it</button>
+      </footer>
+    </article>
     <footer class="footer-main">
       © 2018 - Hut Forty Two
     </footer>

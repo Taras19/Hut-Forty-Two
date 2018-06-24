@@ -968,6 +968,84 @@ textarea {
   -webkit-animation-name: shake;
   animation-name: shake;
 }
+/*chat*/
+.chat-main-container {
+  position: fixed;
+  top: 41px;
+  right: 0;
+  width: 295px;
+  height: 0;
+  transition: height .5s;
+  overflow: auto;
+  background-color: #333333;
+  z-index: 90;
+  box-shadow: -5px 5px 10px rgba(66, 63, 63, 0.61);
+}
+.chat-main-container-open {
+  height: 395px;
+}
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #33cc33;
+  color: #FFFFFF;
+}
+.live-chat-title {
+  padding: 10px 0 10px 50px;
+  font-size: 12px;
+  margin-bottom: 0;
+  align-self: center;
+  background: url("../img/spritesheet.png") no-repeat -55px -60px/250px;
+}
+.live-chat-button {
+  align-self: center;
+  margin-right: 15px;
+  font-size: 28px;
+  transition: .5s;
+  cursor: pointer;
+}
+.chat-main-container form {
+  margin:20px 15px;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+}
+.chat-main-container form input,
+ .chat-main-container form textarea {
+  margin-bottom: 30px;
+  border: none;
+  background-color: #423F3F;
+  padding:10px;
+  color: #FFFFFF;
+  font-size:12px;
+}
+.chat-main-container form textarea {
+  margin-bottom:10px;
+}
+textarea {
+  resize: none;
+}
+.chat-main-container form ::-webkit-input-placeholder { color:#FFFFFF; }
+.chat-main-container form ::-moz-placeholder          { color:#FFFFFF; } /* Firefox 19+ */
+.chat-main-container form :-moz-placeholder           { color:#FFFFFF; } /* Firefox 18- */
+.chat-main-container form :-ms-.chat-main-container form input-placeholder { color:#FFFFFF; }
+.chat-footer {
+  margin: 0 15px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.live-chat-reset, 
+.live-chat-submit {
+  color: #FFFFFF;
+  padding:10px 60px 10px 10px;
+  background: #423F3F;
+  border: none;
+  font-size:12px;
+}
+.live-chat-submit {
+  background: url("../img/spritesheet.png") no-repeat 12px -1319px #33cc33;
+  padding: 5px 75px 5px 10px;
+}
 /**/
 /*media margin-top ,margin-bottom from % to px*/
 @media all and (min-width:1201px){
@@ -1159,6 +1237,9 @@ textarea {
   .relationship-management-icon.animation-bg-move-js{
     background-size: 22vmax;/*245px*/
   }
+  .chat-main-container{
+    top:0;
+  }
 }
 
 /* start-conversation__container,start-conversation__container-select-leter */
@@ -1291,4 +1372,9 @@ textarea {
   }
   
   */
+}
+@media all and (max-height:395px){
+  .chat-main-container-open{
+    height:100vh;
+  }
 }

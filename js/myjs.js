@@ -14,17 +14,9 @@ document.addEventListener("DOMContentLoaded", function(){
 	});
 	/* event for nav,title,arrow */
 	window.addEventListener("scroll", function(){
-		let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+		//let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 		/*menu from static to fixed +*/
-		requestAnimationFrame(function(){
-			
-			if(scrollTop > 50){
-				navTop.classList.add("nav-top-fixed");
-				body.classList.add("body--padding");
-			} else{ navTop.classList.remove("nav-top-fixed");
-					body.classList.remove("body--padding");
-				}
-			});
+		requestAnimationFrame(changePositionHeader);
 			
 		/* animation title +*/
 		requestAnimationFrame(getAnimatedTitle);
@@ -39,13 +31,26 @@ document.addEventListener("DOMContentLoaded", function(){
 	/* resize window*/
 	window.addEventListener("resize", function(){
 		requestAnimationFrame(changeProgres);
-	})
+	});
 
 	/* open,close menu +*/
 	const header = document.querySelector(".header-top-container");
 	const menuButton = document.querySelector(".btn");
 	menuButton.addEventListener("click", function(){
 		header.classList.toggle("header-top-container--close");
+	});
+
+	/* open,close chat +*/
+	const liveChatButton = document.querySelector(".live-chat-button");
+	const itemAsideChat = document.querySelector(".nav-top__link--chat");
+	const chatMainContainer = document.querySelector(".chat-main-container");
+	itemAsideChat.addEventListener("click", function(){
+		chatMainContainer.classList.add("chat-main-container-open");
+		itemAsideChat.classList.remove("active-link");
+	});
+	liveChatButton.addEventListener("click", function(){
+		chatMainContainer.classList.remove("chat-main-container-open");
+		itemAsideChat.classList.add("active-link");
 	});
 
 	/* animation background-size */
@@ -149,5 +154,20 @@ document.addEventListener("DOMContentLoaded", function(){
 		progres.style.width = (navTopWidth / 100) * percentScroll + "px";
 
 
+	}
+
+	/**/
+	function changePositionHeader(){
+			let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+			if(scrollTop > 50 && !navTop.classList.contains("nav-top-fixed")){
+				navTop.classList.add("nav-top-fixed");
+				body.classList.add("body--padding");
+				console.log(scrollTop);
+			} 
+			else if(scrollTop < 50 && navTop.classList.contains("nav-top-fixed")){ 
+				navTop.classList.remove("nav-top-fixed");
+				body.classList.remove("body--padding");
+				console.log(scrollTop);
+				}
 	}
 });
