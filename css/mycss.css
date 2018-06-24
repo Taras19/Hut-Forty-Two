@@ -1185,6 +1185,9 @@ button:hover::before {
   .start-conversation__container-select-leter {
     width:100%;
   }
+  .start-conversation__list-letter {
+    width: 100%;
+  }
   .start-conversation__list-letter label:first-child{
     margin-left:0;
   }
