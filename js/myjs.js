@@ -33,11 +33,50 @@ document.addEventListener("DOMContentLoaded", function(){
 		requestAnimationFrame(changeProgres);
 	});
 
+	/* scroll */
+	const linkNav = document.querySelectorAll(".working-link-js"); //выбираем все ссылки к якорю на странице('[href^="#"]')
+	let V = 0.5;  // скорость, может иметь дробное значение через точку (чем меньше значение - тем больше скорость)
+	for (let i = 0; i < linkNav.length; i++) {
+	    linkNav[i].addEventListener('click', function(e) { //по клику на ссылку
+	        //e.preventDefault(); //отменяем стандартное поведение
+	        navTop.classList.remove("header-top-container--close");
+	        let w = window.pageYOffset,  // производим прокрутка прокрутка
+	        hash = this.href.replace(/[^#]*(.*)/, '$1');  // к id элемента, к которому нужно перейти
+	        let t = document.querySelector(hash).getBoundingClientRect().top,  // отступ от окна браузера до id
+	        start = null;
+	        requestAnimationFrame(step);  // подробнее про функцию анимации [developer.mozilla.org]
+	        function step(time) {
+	            if (start === null) start = time;
+	            let progress = time - start,
+	            r = (t < 0 ? Math.max(w - progress/V, w + t) : Math.min(w + progress/V, w + t));
+	            window.scrollTo(0,r);
+	            if (r != w + t) {
+	                requestAnimationFrame(step)
+	            } else {
+	                location.hash = hash  // URL с хэшем
+	            }
+	        }
+	    }, false);
+	}
+
 	/* open,close menu +*/
 	const header = document.querySelector(".header-top-container");
 	const menuButton = document.querySelector(".btn");
 	menuButton.addEventListener("click", function(){
 		header.classList.toggle("header-top-container--close");
+	});
+
+	/* open,close search +*/ 
+	const searchItemTop = document.querySelector(".nav-top__link--search");
+	const searchItemBottom = document.querySelector(".nav-bottom__search");
+	const searchContainer = document.querySelector(".search-container");
+	searchItemTop.addEventListener("click", changeStateSearch);
+	searchItemBottom.addEventListener("click", changeStateSearch);
+	const searchContainerButton = document.querySelector(".search-container-button");
+	searchContainerButton.addEventListener("click",function(){
+		searchContainer.classList.remove("search-container-open");
+		searchItemTop.classList.remove("active-link");
+		searchItemBottom.classList.remove("active-link");
 	});
 
 	/* open,close chat +*/
@@ -47,6 +86,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	itemAsideChat.addEventListener("click", function(){
 		chatMainContainer.classList.add("chat-main-container-open");
 		itemAsideChat.classList.remove("active-link");
+		navTop.classList.remove("header-top-container--close");
 	});
 	liveChatButton.addEventListener("click", function(){
 		chatMainContainer.classList.remove("chat-main-container-open");
@@ -158,16 +198,30 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	/**/
 	function changePositionHeader(){
-			let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-			if(scrollTop > 50 && !navTop.classList.contains("nav-top-fixed")){
-				navTop.classList.add("nav-top-fixed");
-				body.classList.add("body--padding");
-				console.log(scrollTop);
-			} 
-			else if(scrollTop < 50 && navTop.classList.contains("nav-top-fixed")){ 
-				navTop.classList.remove("nav-top-fixed");
-				body.classList.remove("body--padding");
-				console.log(scrollTop);
-				}
+		let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+		if(scrollTop > 41 && !navTop.classList.contains("nav-top-fixed")){
+			navTop.classList.add("nav-top-fixed");
+			body.classList.add("body--padding");
+		} 
+		else if(scrollTop <= 41 && navTop.classList.contains("nav-top-fixed")){ 
+			navTop.classList.remove("nav-top-fixed");
+			body.classList.remove("body--padding");
+			}
+	}
+
+	/* open search */
+	function changeStateSearch(){
+		searchContainer.classList.add("search-container-open");
+		searchItemTop.classList.add("active-link");
+		searchItemBottom.classList.add("active-link");
+		navTop.classList.remove("header-top-container--close");
+	}
+
+	/**/
+	const linkAll = document.querySelectorAll('[href^="#"]'); 
+	for (let i = 0; i < linkAll.length; i++) {
+	    linkAll[i].addEventListener('click', function(e) { 
+	        e.preventDefault(); 
+	    });
 	}
 });
