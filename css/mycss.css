@@ -963,6 +963,7 @@ textarea {
 /**/
 button{
   position:relative;
+  cursor:pointer;
 }
 button::before {
     content: "";
