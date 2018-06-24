@@ -585,6 +585,7 @@ textarea {
   width:56%;
 }
 .start-conversation__list-letter label{
+  position:relative;
   padding: 10px 15px;
   background-color: rgba(204,204,204,.25);
   color: #33CC33;
@@ -592,6 +593,24 @@ textarea {
   font-size: 28px;
   line-height: 28px;
   font-weight: bold;
+  cursor:pointer;
+  overflow:hidden;
+}
+.start-conversation__list-letter label::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    background: rgba(51,51,51,.5);
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transition: all .5s;
+}
+.start-conversation__list-letter label:hover {
+    border-radius: 5px;
+}
+.start-conversation__list-letter label:hover::before {
+    width: 100%;
 }
 .start-conversation__list-letter input[type="radio"]{
   display:none;
