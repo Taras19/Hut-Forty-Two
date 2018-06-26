@@ -73,10 +73,12 @@ document.addEventListener("DOMContentLoaded", function(){
 	searchItemTop.addEventListener("click", changeStateSearch);
 	searchItemBottom.addEventListener("click", changeStateSearch);
 	const searchContainerButton = document.querySelector(".search-container-button");
+	const searchInput = document.querySelector(".search-input");
 	searchContainerButton.addEventListener("click",function(){
 		searchContainer.classList.remove("search-container-open");
 		searchItemTop.classList.remove("active-link");
 		searchItemBottom.classList.remove("active-link");
+		searchInput.value = "";
 	});
 
 	/* open,close chat +*/
